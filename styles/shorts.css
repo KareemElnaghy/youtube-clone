@@ -1,0 +1,120 @@
+.shorts-row{
+  grid-column: 1 / -1;
+}
+
+.shorts-gallery {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  background-color: rgb(250, 250, 250);
+  gap: 10px;
+}
+
+
+@media (max-width: 750px) {
+  .shorts-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .short-thumbnail-container:nth-child(3),
+  .short-thumbnail-container:nth-child(4),
+  .short-thumbnail-container:nth-child(5) {
+    display: none;
+  }
+}
+
+@media (min-width: 751px) and (max-width: 849px) {
+  .shorts-gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .short-thumbnail-container:nth-child(4),
+  .short-thumbnail-container:nth-child(5) {
+    display: none;
+  }
+}
+
+@media (min-width: 850px) and (max-width: 999px) {
+  .shorts-gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .short-thumbnail-container:nth-child(5) {
+    display: none;
+  }
+}
+
+@media (min-width: 1000px) {
+  .shorts-gallery {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .short-thumbnail-container {
+    display: block;
+  }
+}
+
+.short-video-title{
+  font-size: 17px;
+  font-weight: 500;
+  color: black;
+  margin-top: 5px;
+}
+
+.short-video-stats{
+  font-size: 14px;
+  color: rgb(100, 100, 100);
+  margin-top: 7px;
+}
+
+
+
+.shorts-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+  background-color: rgb(250, 250, 250);
+  z-index: 0;
+  width: 100%;
+  padding-bottom: 5px;
+}
+
+.short-thumbnail{
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+
+.shorts-icon{
+  width: 70px;
+  margin-left: 10px;
+}
+
+
+.ellipsis-icon{
+  width: 20px;
+  margin-right: 20px;
+}
+
+.ellipsis-icon-button{
+  height: 40px;
+  width: 40px;
+  border-style: none;
+  margin-left: -1px;
+  margin-right: 10px;
+  border-radius: 70%;
+  background-color: rgb(250, 250, 250);
+  transition: background-color 0.15s;
+}
+
+.ellipsis-icon-button:active{
+  background-color: rgb(230, 230, 230);
+}
+
+.ellipsis-icon{
+  width: 20px;
+  margin-left: 4px;
+  margin-top: 2px;
+}
+
